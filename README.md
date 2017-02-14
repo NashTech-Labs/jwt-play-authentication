@@ -8,4 +8,3 @@ Instructions :-
 * Install Typesafe Activator if you do not have it already. You can get it from here: http://www.playframework.com/download
 * Execute `activator clean compile` to build the product
 * Execute `activator run` to execute the product
-* playing-reactive-mongo should now be accessible at localhost:9000
