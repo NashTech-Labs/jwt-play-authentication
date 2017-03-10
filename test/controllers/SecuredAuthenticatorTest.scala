@@ -2,6 +2,7 @@ package controllers
 
 import akka.actor.ActorSystem
 import akka.stream.ActorMaterializer
+import models.DataSource
 import play.api.mvc.Results
 import play.api.test.{FakeRequest, PlaySpecification}
 
@@ -30,7 +31,7 @@ class SecuredAuthenticatorTest extends PlaySpecification {
       }, FakeRequest().withHeaders("jw_token" -> jwtToken))
 
       status(of = response) must beEqualTo(OK)
-      contentAsString(of = response) must beEqualTo("Authorization successful")
+      contentAsString(of = response) must beEqualTo("test jwt secured authenticator")
     }
 
     "not validate the request when user details does not match" in {

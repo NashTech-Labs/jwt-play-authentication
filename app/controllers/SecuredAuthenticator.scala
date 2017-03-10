@@ -2,20 +2,12 @@ package controllers
 
 import javax.inject.Inject
 
+import models.DataSource
 import play.api.libs.json.Json
 import play.api.mvc._
 import utilities.JwtUtility
 
 import scala.concurrent.Future
-
-class DataSource {
-  def getUser(email: String, userId: String): Option[UserInfo] =
-    if (email == "test@example.com" && userId == "userId123") {
-      Some(UserInfo(1, "John", "Nash", email))
-    } else {
-      None
-    }
-}
 
 case class UserInfo(id: Int,
                     firstName: String,

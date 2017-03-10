@@ -1,5 +1,6 @@
 package controllers
 
+import models.DataSource
 import play.api.test.{FakeRequest, PlaySpecification}
 
 class HomeControllerTest extends PlaySpecification {
